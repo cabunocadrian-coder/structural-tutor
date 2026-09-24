@@ -1,147 +1,63 @@
 # 🏗️ Structural Tutor
 
-### 📐 A Local AI-Powered Structural Engineering Tutor using Tether QVAC
+### 🤖 A Local AI-Powered Structural Engineering Tutor
 
-> **Learn structural engineering. Solve problems. Understand the steps. All locally. 🤖**
+Structural Tutor is a simple web app made for **civil engineering students** to help them understand basic structural engineering concepts and solve common engineering problems.
 
-Structural Tutor is a local AI web application built for **civil engineering students** who want help understanding structural engineering concepts and solving basic engineering problems.
+It uses **Tether QVAC** to run AI locally on the user's device, while supported numerical problems are handled using actual engineering formulas.
 
-It combines **Tether QVAC local AI inference** with **deterministic engineering calculations**, so supported numerical problems are calculated using actual engineering formulas instead of relying entirely on AI-generated answers.
+---
+
+## 🔗 Quick Links
+
+- 📦 **GitHub Repository:** https://github.com/cabunocadrian-coder/structural-tutor
+- 🌐 **Local App:** http://localhost:3000
+
+> 💡 `http://localhost:3000` works when the app is running on your computer.
 
 ---
 
 ## ✨ Features
 
-🧮 **Engineering Calculations**
+### 🧮 Engineering Calculations
 
-Solve supported structural engineering problems with deterministic calculations.
+Structural Tutor can solve basic engineering problems such as:
 
-🤖 **Local AI**
+- 🏗️ Beam Reactions
+- 📈 Bending Moment
+- 🧱 Stress
+- 📏 Strain
+- 🛡️ Factor of Safety
 
-Uses **Tether QVAC** to run a local Llama model directly on the user's device.
+### 🤖 Local AI Tutor
 
-📚 **Step-by-Step Solutions**
+Ask structural engineering questions and get explanations using a **local AI model powered by QVAC**.
 
-Shows the given values, formula, solution, and final answer.
+### 📚 Step-by-Step Solutions
 
-🧠 **Concept Explanations**
+Supported calculation problems show:
 
-Ask questions about basic structural engineering concepts and receive explanations from the local AI model.
+- Given values
+- Formula
+- Solution
+- Final answer
 
-📋 **Problem Library**
+### 🔒 Local AI Processing
 
-Includes ready-to-use examples for common engineering problems.
-
-🔒 **Local Processing**
-
-The QVAC model runs locally instead of requiring a remote AI API.
-
-🎓 **Student Friendly**
-
-Designed with civil engineering students in mind.
+The QVAC model runs on the user's device instead of sending AI requests to a cloud AI service.
 
 ---
 
-## 🧮 Supported Calculations
+## 🏗️ Beam Reactions
 
-### 🏗️ Beam Reactions
+The Beam Reactions tool can solve common simply supported beam problems, including:
 
-- Full-span uniformly distributed loads
+- Uniformly distributed loads (UDL)
 - Center point loads
 - Off-center point loads
-- Combined UDL and point loads
+- Combined loads
 
-### 📈 Bending Moment
-
-- Center point loads
-- Off-center point loads
-- Full-span UDL
-- Combined UDL and point loads
-
-### 🧱 Material Properties
-
-- Stress
-- Strain
-- Young's Modulus
-- Factor of Safety
-
----
-
-## 🧠 Structural Engineering Concepts
-
-Structural Tutor can explain concepts such as:
-
-- 💪 Tension
-- 🗜️ Compression
-- 🔄 Elastic behavior
-- 🧱 Plastic behavior
-- 📏 Simply supported beams
-- 🏗️ Fixed beams
-- 🏢 Beam vs. column
-- ⚖️ Dead loads
-- 👥 Live loads
-- ↔️ Shear force
-- 📈 Bending moment
-- ⚖️ Equilibrium
-- 📐 Free-body diagrams
-
----
-
-## 🤖 Powered by Tether QVAC
-
-Structural Tutor uses the **Tether QVAC SDK** for local AI inference.
-
-The application loads a local Llama model through QVAC and generates responses directly on the user's computer.
-
-### Why QVAC?
-
-⚡ Local inference  
-🔒 User data stays on the device  
-🌐 No external AI API required  
-💰 No per-request AI API cost  
-📱 Designed for on-device AI applications
-
----
-
-## ⚙️ How Structural Tutor Works
-
-Instead of asking the AI to calculate everything, Structural Tutor uses two approaches:
-
-### 🧮 Supported Numerical Problems
-
-The application recognizes supported engineering problems and performs the calculations using JavaScript formulas.
-
-This provides consistent numerical results.
-
-### 🤖 Conceptual / Unsupported Questions
-
-If the question is conceptual or not currently supported by the deterministic calculator, Structural Tutor sends it to the local QVAC model.
-
-### 🔄 Simple Flow
-
-**👤 User**
-
-⬇️
-
-**🌐 Structural Tutor Web App**
-
-⬇️
-
-**⚙️ Node.js / Express**
-
-↙️　　　　　　　　　↘️
-
-**🧮 Engineering Calculator**　 **🤖 QVAC Local AI**
-
-↘️　　　　　　　　　↙️
-
-**📚 Step-by-Step Answer**
-
----
-
-## 🧪 Example Problems
-
-### 🏗️ Beam Reactions
+Example:
 
 ```text
 A simply supported beam is 8 m long and carries
