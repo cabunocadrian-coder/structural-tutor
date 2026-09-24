@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Structural Tutor</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <div class="background-glow glow-one"></div>
+  <div class="background-glow glow-two"></div>
+
+  <header class="header">
+    <div class="brand">
+      <div class="logo">S</div>
+
+      <div>
+        <h1>Structural Tutor</h1>
+        <p>AI-powered structural engineering study assistant</p>
+      </div>
+    </div>
+
+    <div class="badge">
+      <span></span>
+      QVAC LOCAL AI
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="hero">
+      <p class="eyebrow">CIVIL ENGINEERING • STRUCTURES</p>
+
+      <h2>
+        Understand structural problems,
+        <span>step by step.</span>
+      </h2>
+
+      <p class="hero-text">
+        Enter a structural engineering problem and get a clear,
+        student-friendly explanation powered by local AI.
+      </p>
+    </section>
+
+    <!-- SOLVER -->
+
+    <section class="card">
+
+      <div class="section-heading">
+        <div>
+          <p class="label">STRUCTURAL PROBLEM</p>
+          <h3>What are you working on?</h3>
+        </div>
+
+        <div class="status">
+          ● LOCAL
+        </div>
+      </div>
+
+      <textarea
+        id="problem"
+        placeholder="Example:
+
+A simply supported beam has a span of 6 m and carries a 20 kN point load at the center. Find the reactions at the supports."
+      ></textarea>
+
+      <button id="solveBtn">
+        <span>✦</span>
+        Solve Problem
+      </button>
+
+      <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <span>Structural Tutor is analyzing the problem locally...</span>
+      </div>
+
+    </section>
+
+    <!-- RESULT -->
+
+    <section id="resultCard" class="card result-card hidden">
+
+      <div class="section-heading">
+        <div>
+          <p class="label">STRUCTURAL ANALYSIS</p>
+          <h3>Step-by-step solution</h3>
+        </div>
+
+        <div class="ai-badge">
+          QVAC
+        </div>
+      </div>
+
+      <div id="result" class="result"></div>
+
+    </section>
+
+    <!-- PROBLEM LIBRARY -->
+
+    <section class="examples">
+
+      <div class="section-heading">
+        <div>
+          <p class="label">PROBLEM LIBRARY</p>
+          <h3>Practice structural problems</h3>
+        </div>
+      </div>
+
+      <div class="example-grid">
+
+        <button
+          class="example"
+          data-problem="A simply supported beam has a span of 8 m and carries a uniformly distributed load of 10 kN/m over its entire length. Determine the reactions at supports A and B."
+        >
+          <div class="example-icon">⚖</div>
+          <strong>Beam Reactions</strong>
+          <span>Find support reactions from structural loads</span>
+        </button>
+
+        <button
+          class="example"
+          data-problem="A simply supported beam is 10 m long and carries a 30 kN point load located 4 m from support A. Determine the reactions at supports A and B."
+        >
+          <div class="example-icon">↔</div>
+          <strong>Off-Center Load</strong>
+          <span>Analyze an eccentric point load</span>
+        </button>
+
+        <button
+          class="example"
+          data-problem="A simply supported beam is 8 m long and carries a 20 kN point load at the center of the beam. Determine the maximum bending moment."
+        >
+          <div class="example-icon">〽</div>
+          <strong>Bending Moment</strong>
+          <span>Calculate maximum bending moment</span>
+        </button>
+
+        <button
+          class="example"
+          data-problem="A steel bar is subjected to a tensile force of 75 kN. The bar has a cross-sectional area of 1500 mm². Determine the normal stress in the bar."
+        >
+          <div class="example-icon">σ</div>
+          <strong>Stress</strong>
+          <span>Calculate stress from force and area</span>
+        </button>
+
+        <button
+          class="example"
+          data-problem="A steel bar originally 2500 mm long elongates by 5 mm when subjected to a tensile load. Determine the strain in the bar."
+        >
+          <div class="example-icon">ε</div>
+          <strong>Strain</strong>
+          <span>Calculate deformation relative to length</span>
+        </button>
+
+        <button
+          class="example"
+          data-problem="A material has a normal stress of 150 MPa and a strain of 0.00075. Determine Young's modulus."
+        >
+          <div class="example-icon">E</div>
+          <strong>Young's Modulus</strong>
+          <span>Relate stress and strain</span>
+        </button>
+
+        <button
+          class="example"
+          data-problem="A structural member has a failure strength of 600 MPa and a working stress of 200 MPa. Find the factor of safety."
+        >
+          <div class="example-icon">FS</div>
+          <strong>Factor of Safety</strong>
+          <span>Determine the safety factor</span>
+        </button>
+
+        <button
+          class="example"
+          data-problem="A steel bar is pulled with a force of 40 kN. What type of force is acting on the bar?"
+        >
+          <div class="example-icon">↗</div>
+          <strong>Tension</strong>
+          <span>Identify tensile loading</span>
+        </button>
+
+        <button
+          class="example"
+          data-problem="A concrete column is pushed by an axial force of 100 kN. What type of force is acting on the column?"
+        >
+          <div class="example-icon">↕</div>
+          <strong>Compression</strong>
+          <span>Identify compressive loading</span>
+        </button>
+
+      </div>
+
+    </section>
+
+    <!-- FEATURES -->
+
+    <section class="info-grid">
+
+      <div class="info-card">
+        <div class="info-icon">🤖</div>
+
+        <h3>Local AI</h3>
+
+        <p>
+          QVAC runs AI inference locally on the user's device,
+          helping keep engineering problems private.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">📐</div>
+
+        <h3>Engineering Calculations</h3>
+
+        <p>
+          Common structural calculations are handled directly
+          by the application for consistent numerical results.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">🔒</div>
+
+        <h3>Private</h3>
+
+        <p>
+          Your engineering problems stay on your device
+          instead of being sent to a remote AI service.
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <span>Structural Tutor</span>
+    <span>Local inference • Built with QVAC</span>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
